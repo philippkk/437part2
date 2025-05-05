@@ -59,6 +59,7 @@
     <Compile Include="Assets/scripts/setTarget.cs" />
     <Compile Include="Assets/scripts/bodyController.cs" />
     <Compile Include="Assets/scripts/tentacle.cs" />
+    <Compile Include="Assets/scripts/FaskIKFabric.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/models/checker.shader" />
