@@ -36,17 +36,13 @@ public class spiderController : MonoBehaviour
 
     void LateUpdate()
     {
-        // Update order is important! 
-        // We update things ordered by dependencies. Since the eyes rely on the head, and the head relies
-        // on the body, we update the body first, then the head, and finally the eyes.
-
         RootMotionUpdate();
         HeadTrackingUpdate();
     }
 
     void HeadTrackingUpdate()
     {
-        // Store the current head rotation since we will be resetting it
+        // Store the current headrotation since we will be resetting it
         Quaternion currentLocalRotation = headBone.localRotation;
         // Reset the head rotation so our world to local space transformation will use the head's zero rotation. 
         // Note: Quaternion.Identity is the quaternion equivalent of "zero"

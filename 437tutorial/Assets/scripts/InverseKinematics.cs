@@ -15,7 +15,6 @@ public class InverseKinematics : MonoBehaviour
 
     void OnEnable()
     {
-        // Prevent null ref spam in case we didn't link up the bones
         if (
             firstBone == null ||
             secondBone == null ||
@@ -47,11 +46,8 @@ public class InverseKinematics : MonoBehaviour
 
         var targetDistance = Vector3.Distance(firstBone.position, target.position);
 
-        // Limit hypotenuse to under the total bone distance to prevent invalid triangles
         targetDistance = Mathf.Min(targetDistance, totalChainLength * 0.9999f);
 
-        // Solve for the angle for the root bone
-        // See https://en.wikipedia.org/wiki/Law_of_cosines
         var adjacent =
             (
                 (rootBoneLength * rootBoneLength) +
@@ -60,7 +56,6 @@ public class InverseKinematics : MonoBehaviour
             ) / (2 * targetDistance * rootBoneLength);
         var angle = Mathf.Acos(adjacent) * Mathf.Rad2Deg;
 
-        // We rotate around the vector orthogonal to both pole and second bone
         Vector3 cross = Vector3.Cross(towardPole, towardSecondBone);
 
         if (!float.IsNaN(angle))
@@ -68,8 +63,6 @@ public class InverseKinematics : MonoBehaviour
             firstBone.RotateAround(firstBone.position, cross, -angle);
         }
 
-        // We've rotated the root bone to the right place, so we just 
-        // look at the target from the elbow to get the final rotation
         var secondBoneTargetRotation = Quaternion.LookRotation(target.position - secondBone.position, cross);
         secondBoneTargetRotation *= Quaternion.Euler(secondBoneEulerAngleOffset);
         secondBone.rotation = secondBoneTargetRotation;
