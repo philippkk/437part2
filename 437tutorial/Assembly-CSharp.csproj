@@ -48,9 +48,16 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.1.1f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/scripts/SmoothDamp.cs" />
+    <Compile Include="Assets/scripts/InverseKinematics.cs" />
+    <Compile Include="Assets/scripts/Easing.cs" />
     <Compile Include="Assets/rotateToMouse.cs" />
+    <Compile Include="Assets/scripts/LegStepper_Simple.cs" />
+    <Compile Include="Assets/scripts/spiderController.cs" />
     <Compile Include="Assets/scripts/rotateToMouse.cs" />
     <Compile Include="Assets/spiderIKcontroller.cs" />
+    <Compile Include="Assets/scripts/setTarget.cs" />
+    <Compile Include="Assets/scripts/bodyController.cs" />
     <Compile Include="Assets/scripts/tentacle.cs" />
   </ItemGroup>
   <ItemGroup>
