@@ -313,7 +313,7 @@ Transform:
   m_GameObject: {fileID: 622388291}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.31, y: 0.08, z: -4.5}
+  m_LocalPosition: {x: -7.44, y: 0.13, z: -3.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -542,7 +542,7 @@ Transform:
   m_GameObject: {fileID: 1107715063}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: -1}
-  m_LocalPosition: {x: 0, y: -2.19, z: 0}
+  m_LocalPosition: {x: 0, y: -2.19, z: -0.03}
   m_LocalScale: {x: 500, y: 500, z: 500}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -817,6 +817,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wormy
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 455027ab69ffe4822bafd6207dc55424, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -954,9 +958,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 40.33
       objectReference: {fileID: 0}
+    - target: {fileID: 1619839103656386363, guid: 2a46d30547c784b68a330f3e18efb45c, type: 3}
+      propertyPath: wantStepAtDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1619839103656386363, guid: 2a46d30547c784b68a330f3e18efb45c, type: 3}
+      propertyPath: stepOvershootFraction
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 3033286130624193774, guid: 2a46d30547c784b68a330f3e18efb45c, type: 3}
       propertyPath: m_Name
       value: spiderParent
+      objectReference: {fileID: 0}
+    - target: {fileID: 3033286130624193774, guid: 2a46d30547c784b68a330f3e18efb45c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4144635592887807119, guid: 2a46d30547c784b68a330f3e18efb45c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1002,9 +1018,33 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 40.33
       objectReference: {fileID: 0}
+    - target: {fileID: 6288285781932584272, guid: 2a46d30547c784b68a330f3e18efb45c, type: 3}
+      propertyPath: wantStepAtDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6288285781932584272, guid: 2a46d30547c784b68a330f3e18efb45c, type: 3}
+      propertyPath: stepOvershootFraction
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6442354699767486696, guid: 2a46d30547c784b68a330f3e18efb45c, type: 3}
+      propertyPath: wantStepAtDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6442354699767486696, guid: 2a46d30547c784b68a330f3e18efb45c, type: 3}
+      propertyPath: stepOvershootFraction
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 7635639226246762289, guid: 2a46d30547c784b68a330f3e18efb45c, type: 3}
       propertyPath: m_LocalPosition.y
       value: 40.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 8227945488410374996, guid: 2a46d30547c784b68a330f3e18efb45c, type: 3}
+      propertyPath: wantStepAtDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8227945488410374996, guid: 2a46d30547c784b68a330f3e18efb45c, type: 3}
+      propertyPath: stepOvershootFraction
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
