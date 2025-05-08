@@ -7,9 +7,13 @@ public class playerController : MonoBehaviour
     bool inRangeOfSword = false;
     public TMP_Text interactionText;
     public int goalIndex = 0;
+    public bool playingCheckers = false;
 
     Rigidbody rb;
     public Animator swordAnimator;
+
+    public FirstPersonMovement firstPersonMovement;
+    public Camera playerCamera;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -23,6 +27,12 @@ public class playerController : MonoBehaviour
         if (sword.activeSelf)
         {
             handleSwordAnimation();
+        }
+
+        if (playingCheckers)
+        {
+            sword.SetActive(false);
+            firstPersonMovement.enabled = false;
         }
     }
     void handleSwordAnimation()
@@ -52,19 +62,26 @@ public class playerController : MonoBehaviour
         }
     }
 
+    public void SetInteractionText(string text)
+    {
+        interactionText.text = text;
+    }
+
     void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("sword"))
         {
-            interactionText.text = "Press F";
+            SetInteractionText("Press F");
 
             if (Input.GetKeyDown(KeyCode.F))
             {
                 sword.SetActive(true);
                 goalIndex++;
                 Destroy(other.gameObject);
-                interactionText.text = "";
+                SetInteractionText("");
             }
         }
+
+
     }
 }
