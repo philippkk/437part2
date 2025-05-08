@@ -26967,6 +26967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 719d1c65c25c541aabd7a91b1b7a5d26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aiDepth: 2
   PlayerTurn: 1
   checkersBoard: {fileID: 0}
   spots:
