@@ -251,7 +251,7 @@ MonoBehaviour:
   player: {fileID: 0}
   nav: {fileID: 5360987440895462491}
   angryMaterial: {fileID: 2100000, guid: 05a82533990f44892b2d1afeb1e20cc4, type: 2}
-  normalMaterial: {fileID: 2100000, guid: dac834b4b05944c77aa0c67d32fb3fe2, type: 2}
+  normalMaterial: {fileID: 2100000, guid: 05a82533990f44892b2d1afeb1e20cc4, type: 2}
   hitMaterial: {fileID: 2100000, guid: e6185bc70174c4d28a270776e5ad96c1, type: 2}
   health: 1
   agroDistance: 15

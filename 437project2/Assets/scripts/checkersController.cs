@@ -1,8 +1,10 @@
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
 
 public class checkersController : MonoBehaviour
 {
+    public TMP_Text firstText;
     public int aiDepth = 3;
     public bool PlayerTurn = true;
     private bool playerWon = false;
@@ -49,7 +51,7 @@ public class checkersController : MonoBehaviour
         {
             EndCheckersGame();
         }
-        
+
         if (gameActive && PlayerTurn)
         {
             if (CheckForWinCondition())
@@ -65,6 +67,23 @@ public class checkersController : MonoBehaviour
                 return;
             }
             MakeAIMove();
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            aiDepth = 1;
+            firstText.text = "";
+        }
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            aiDepth = 2;
+            firstText.text = "";
+        }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            aiDepth = 3;
+            firstText.text = "";
         }
     }
 
