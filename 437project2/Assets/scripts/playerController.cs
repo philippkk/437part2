@@ -1,12 +1,15 @@
 using UnityEngine;
 using TMPro;
+using Palmmedia.ReportGenerator.Core.Reporting.Builders;
 
 public class playerController : MonoBehaviour
 {
     public GameObject sword;
     bool inRangeOfSword = false;
     public TMP_Text interactionText;
+    public TMP_Text healthText;
     public int goalIndex = 0;
+    public int health = 3;
     public bool playingCheckers = false;
 
     Rigidbody rb;
@@ -34,6 +37,8 @@ public class playerController : MonoBehaviour
             sword.SetActive(false);
             firstPersonMovement.enabled = false;
         }
+
+        healthText.text = "Health: " + health.ToString();
     }
     void handleSwordAnimation()
     {
@@ -81,7 +86,25 @@ public class playerController : MonoBehaviour
                 SetInteractionText("");
             }
         }
+    }
 
-
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("enemy"))
+        {
+            Vector3 playerPos = transform.position;
+            Vector3 enemyPos = other.gameObject.transform.position;
+            playerPos.y = 0;
+            enemyPos.y = 0;
+            if (Vector3.Distance(playerPos, enemyPos) < 2.2f)
+            {
+                health--;
+                if (health <= 0)
+                {
+                    interactionText.text = "You died (press r)";
+                    firstPersonMovement.enabled = false;
+                }
+            }
+        }
     }
 }
