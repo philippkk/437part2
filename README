@@ -1,3 +1,34 @@
 this holds both my tutorial with oscar
 and my project 2
 
+details of project 2
+Terrain:
+	i found a cool forest asset to use
+Navigation Mesh:
+	its there, just go to overlay settings and activate it to see it
+Terrain Agents:
+	1. wander (blue) - wanders around and chases when player gets in range
+	2. patrol (red) - patrols to the patrol points on map and chases when in range
+		note: points are shown but the mesh can just be deleted
+	3. guard (green) - guards the front of the door and always looking at the player
+Player charater:
+	CONTROLS:
+	wasd, movement 
+	space, jump
+	shift, sprint
+	mouse wheel, zoom
+	left click, swing sword
+	right click, block (does nothing im sorry)
+	r, restart game
+	i,o,p, pick checker difficulty 
+Terrain Gameplay:
+	The player will start off looking for the sword (pretty obvious where it is)
+	next the player will need to just go up to it and press f
+	next the player must kill all enemies
+	finally the player must go finish a game of checkers in the little building
+Terrain Exit Lock:
+	click on piece to see avaiable moves.
+	this is a simplified version of checkers with only single captures 
+	play as normal otherwise.
+
+post project note: i did this whole thing in litearlly one day. on Monday of the week this is due my tutorial AND this project got deleted due to some skill issues trying to add themto git. While that is not an excuse, please take that into consideration when grading this. I've skipped classes and work to ensure that I get this done on time. im very tired.
